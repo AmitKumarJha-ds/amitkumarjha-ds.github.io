@@ -5,15 +5,12 @@ toggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   const isDark = document.body.classList.contains('dark-mode');
 
-  // Change icon
   icon.classList.toggle('fa-moon', !isDark);
   icon.classList.toggle('fa-sun', isDark);
 
-  // Save preference
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-// Load theme
 window.addEventListener('DOMContentLoaded', () => {
   const theme = localStorage.getItem('theme');
   if (theme === 'dark') {
@@ -23,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Optional scroll reveal effect
+// Scroll reveal animation
 window.addEventListener('scroll', () => {
   document.querySelectorAll('section').forEach(sec => {
     const top = window.scrollY;
