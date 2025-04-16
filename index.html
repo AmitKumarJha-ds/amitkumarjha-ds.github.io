@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amit Kumar Jha | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -14,59 +16,88 @@
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Internships</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle">🌗</button>
+      <button id="theme-toggle" class="toggle-button"><i class="fas fa-moon"></i></button>
     </nav>
   </header>
 
   <section id="hero">
-    <img src="amit-photo.png" alt="Amit Kumar Jha">
-    <h1>Hi, I'm <span class="highlight">Amit Kumar Jha</span></h1>
-    <p>Data Analyst | Python Developer | Excel & SQL Expert</p>
+    <img src="your-photo.jpg" alt="Amit Kumar Jha" class="profile-pic" />
+    <h1 class="hero-name">Hi, I'm <span class="highlight">Amit Kumar Jha</span></h1>
+    <p class="hero-role">Data Analyst | Python Developer | Excel & SQL Expert</p>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm passionate about data analysis and solving real-world business problems through insights and visualization. I believe in clean, impactful work with measurable results.</p>
+    <p>I am a detail-oriented Data Analyst with hands-on experience in Python, SQL, Power BI, and Excel. With a strong academic foundation and professional internships at TCS, PwC, and MainFlow, I have developed and visualized actionable insights that solve real-world business challenges.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>Hotel Booking Analysis</h3>
-      <p>Used Python (Pandas, Seaborn, Matplotlib) to reduce booking cancellations and increase revenue by identifying key cancellation patterns.</p>
+      <p>Reduced cancellations by 15% and boosted revenue by using EDA with Pandas, Matplotlib, and Seaborn.</p>
     </div>
     <div class="project">
       <h3>Ola Ride Cancellation</h3>
-      <p>Cleaned and visualized data using SQL & Power BI to optimize ride allocation and reduce cancellation rate by 10%.</p>
+      <p>Used SQL & Power BI to find patterns in ride cancellations, helping improve allocation and reduce loss.</p>
     </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul class="skills-grid">
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Power BI</li>
-      <li>Excel</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+    <div class="skills-grid">
+      <div class="skill" data-label="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
+      <div class="skill" data-label="SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></div>
+      <div class="skill" data-label="Pandas"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" /></div>
+      <div class="skill" data-label="NumPy"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" /></div>
+      <div class="skill" data-label="Matplotlib"><img src="https://matplotlib.org/stable/_static/logo2.svg" alt="Matplotlib" /></div>
+      <div class="skill" data-label="Seaborn"><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" /></div>
+      <div class="skill" data-label="Power BI"><img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" /></div>
+      <div class="skill" data-label="Excel"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" /></div>
+      <div class="skill" data-label="VS Code"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" /></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Master's in Computer Applications</strong>, Chandigarh University Online – 2025</p>
+    <p><strong>Bachelor of Computer Applications</strong>, Kolhan University – 2020–2023 (83.17%)</p>
+  </section>
+
+  <section id="experience">
+    <h2>Internships</h2>
+    <ul>
+      <li><strong>Tata Consultancy Services</strong> – Visualisation with Power BI</li>
+      <li><strong>PwC Switzerland</strong> – Power BI dashboarding</li>
+      <li><strong>Main Flow Pvt. Ltd.</strong> – Data analysis with Python, clustering & EDA</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AI Tools Workshop – Be10X</li>
+      <li>Generative AI for Beginners – Great Learning</li>
+      <li>Data Analysis Using Excel – Great Learning</li>
     </ul>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <a href="resume.pdf" download class="btn">Download My Resume</a>
+    <a href="Amit Resume.pdf" download class="btn"><i class="fas fa-download"></i> Download My Resume</a>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:amitkumarjhads@gmail.com">amitkumarjhads@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/amitkumarjha7777/" target="_blank">/in/amitkumarjha7777</a></p>
-    <p>GitHub: <a href="https://github.com/AmitKumarJha-ds" target="_blank">@AmitKumarJha-ds</a></p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:amitkumarjhads@gmail.com">amitkumarjhads@gmail.com</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/amitkumarjha7777/" target="_blank">LinkedIn</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/AmitKumarJha-ds" target="_blank">GitHub</a></p>
   </section>
 
   <footer>
