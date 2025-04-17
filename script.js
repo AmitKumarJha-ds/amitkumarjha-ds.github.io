@@ -1,101 +1,59 @@
-// 🌗 Theme Toggle
-const toggle = document.getElementById('theme-toggle');
-const icon = toggle.querySelector('i');
+// Toggle menu (mobile)
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
 
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
-  icon.classList.toggle('fa-moon', !isDark);
-  icon.classList.toggle('fa-sun', isDark);
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  const theme = localStorage.getItem('theme');
-  if (theme === 'dark') {
-    document.body.classList.add('dark-mode');
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-  }
-
-  // ⌨️ Typewriter (initialize on DOM load)
-  const typewriter = document.querySelector('.typewriter');
-  if (typewriter) {
-    const originalText = typewriter.textContent.trim();
-    typewriter.textContent = '';
-    let i = 0;
-    const type = () => {
-      if (i < originalText.length) {
-        typewriter.textContent += originalText.charAt(i);
-        i++;
-        setTimeout(type, 100);
-      }
-    };
-    type();
-  }
+// Dark Mode Toggle (Checkbox Version)
+const darkToggle = document.getElementById('darkToggle');
+darkToggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
 });
 
-// 🧙 Scroll Reveal Effect using IntersectionObserver
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
+// Typing Effect for Hero Section
+const typingElement = document.querySelector('.typing');
+const words = ["Data Analyst", "Insight Seeker", "Excel Expert", "Python Ninja"];
+let wordIndex = 0;
+let charIndex = 0;
+let currentWord = '';
+let isDeleting = false;
+
+function typeEffect() {
+  if (wordIndex >= words.length) wordIndex = 0;
+  currentWord = words[wordIndex];
+
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      wordIndex++;
+    }
+  } else {
+    typingElement.textContent = currentWord.substring(0, charIndex++);
+    if (charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    }
+  }
+  setTimeout(typeEffect, isDeleting ? 50 : 120);
+}
+
+typeEffect();
+
+// Smooth Scroll to Sections
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetID);
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 60, // Header height ke liye adjust
+          behavior: 'smooth'
+        });
       }
     });
-  },
-  { threshold: 0.2 }
-);
-
-document.querySelectorAll('section').forEach(section => {
-  observer.observe(section);
 });
-
-// 🌌 tsParticles for Hero Background
-tsParticles.load("particles-js", {
-  fullScreen: { enable: false },
-  background: {
-    color: { value: "#0a0a0a" }
-  },
-  fpsLimit: 60,
-  particles: {
-    number: { value: 80, density: { enable: true, area: 800 } },
-    color: { value: ["#00f2ff", "#39ff14", "#d946ef"] },
-    shape: { type: "circle" },
-    opacity: { value: 0.7 },
-    size: { value: { min: 1, max: 4 } },
-    move: {
-      enable: true,
-      speed: 1,
-      direction: "none",
-      outModes: { default: "bounce" }
-    }
-  },
-  interactivity: {
-    events: {
-      onHover: { enable: true, mode: "repulse" },
-      resize: true
-    },
-    modes: {
-      repulse: { distance: 100, duration: 0.4 }
-    }
-  }
-});
-
-// ✅ Contact Form Submission Confirmation
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // prevent actual submission for demo
-    setTimeout(() => {
-      alert("Thanks for your message! I’ll get back to you soon.");
-      contactForm.reset(); // optional: clear form
-    }, 300);
-  });
-}
-document.querySelectorAll('section').forEach(section => {
-  observer.observe(section); // skills included
-});
-

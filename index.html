@@ -1,138 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amit Kumar Jha | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Amit Kumar Jha | Portfolio</title>
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+        <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
 <body>
+
+  <!-- Navbar Start -->
   <header>
-    <nav>
-      <div class="logo">Amit Kumar Jha</div>
-      <ul class="nav-links">
+      <nav class="navbar">
+          <div class="logo">Amit Kumar Jha</div>
+          
+          <ul class="nav-links" id="navLinks">
+              <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Internships</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="toggle-button"><i class="fas fa-moon"></i></button>
+
+      <!-- Dark Mode Toggle -->
+      <div class="toggle-switch">
+          <input type="checkbox" id="darkToggle" />
+          <label for="darkToggle" class="slider"></label>
+          
+        </div>
+       
+
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
-  </header>
+</header>
 
-  <section id="hero">
-    <img src="your-photo.jpg" alt="Amit Kumar Jha" class="profile-pic" />
-    <h1 class="hero-name"><span class="typewriter">Hi, I'm Amit Kumar Jha</span></h1>
-    <p class="hero-role">Data Analyst | Python Developer | Excel & SQL Expert</p>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a detail-oriented Data Analyst with hands-on experience in Python, SQL, Power BI, and Excel. With a strong academic foundation and professional internships at TCS, PwC, and MainFlow, I have developed and visualized actionable insights that solve real-world business challenges.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Hotel Booking Analysis</h3>
-      <p>Reduced cancellations by 15% and boosted revenue by using EDA with Pandas, Matplotlib, and Seaborn.</p>
+<!-- Hero Section Start -->
+<section id="home" class="hero">
+    <div class="hero-content">
+      <div class="left">
+        <h1>Hi, I'm <span class="highlight">Amit Kumar Jha</span></h1>
+        <h2>I’m a <span class="typing"></span></h2>
+        <p>A passionate Data Analyst who loves turning data into insights.</p>
+  
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://github.com/AmitKumarJha-ds" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/amitkumarjha7777/" target="_blank">LinkedIn</a>
+          <a href="mailto:amitkumarjhads@gmail.com" target="_blank">Email</a>
+          <a href="https://www.instagram.com/mit_kumarrr/" target="_blank">Instagram</a>
+          <a href="https://wa.me/+918405801203" target="_blank">WhatsApp</a>
+        </div>
+  
+        <a href="#contact" class="btn">Hire Me</a>
+      </div>
+  
+      <div class="right">
+        <img src="pic.png" alt="Data Analyst Animation">
+      </div>
     </div>
-    <div class="project">
-      <h3>Ola Ride Cancellation</h3>
-      <p>Used SQL & Power BI to find patterns in ride cancellations, helping improve allocation and reduce loss.</p>
+</section>
+
+<!-- Hero Section End -->
+  <!-- Navbar End -->
+
+<!-- About Section Start -->
+<section id="about" class="about-section">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p>
+        I'm a self-taught Data Analyst and Web Developer with hands-on experience in transforming raw data into actionable insights and building clean, functional web interfaces. I specialize in tools like Python, SQL, Power BI, and Excel, and I enjoy crafting solutions that are not only efficient but also user-focused. I value simplicity, honesty, and purpose-driven development. Currently, I'm focused on deepening my backend and data engineering skills while contributing to meaningful projects from ideation to execution.
+      </p>
     </div>
   </section>
+  <!-- About Section End -->
+  
 
-  <section id="Skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill" data-label="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
-      <div class="skill" data-label="SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></div>
-      <div class="skill" data-label="Pandas"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" /></div>
-      <div class="skill" data-label="NumPy"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" /></div>
-      <div class="skill" data-label="Matplotlib"><img src="https://matplotlib.org/stable/_static/logo2.svg" alt="Matplotlib" /></div>
-      <div class="skill" data-label="Seaborn"><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" /></div>
-      <div class="skill" data-label="Power BI"><img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" /></div>
-      <div class="skill" data-label="Excel"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" /></div>
-      <div class="skill" data-label="VS Code"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" /></div>
-    </div>
-  </section>
+<!-- Skills Section Start -->
+<section id="skills" class="skills-section">
+    <div class="container">
+      <h2 class="section-title">Technologies & Tools</h2>
+  
+      <!-- Languages -->
+      <h3 class="skill-subtitle">Languages</h3>
+      <div class="skills-container">
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><h3>Python</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/><h3>SQL</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><h3>HTML</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><h3>CSS</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><h3>JavaScript</h3></div>
+      </div>
+  
+      <!-- Frameworks -->
+      <h3 class="skill-subtitle">Frameworks</h3>
+      <div class="skills-container">
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/><h3>Pandas</h3></div>
+        <div class="skill-card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg"/><h3>NumPy</h3></div>
+        <div class="skill-card"><img src="https://matplotlib.org/_static/images/logo2.svg"/><h3>Matplotlib</h3></div>
+        <div class="skill-card"><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"/><h3>Seaborn</h3></div>
+      </div>
+  
+      <!-- Tools -->
+      <h3 class="skill-subtitle">Tools</h3>
+      <div class="skills-container">
+        <div class="skill-card"><img src="https://img.icons8.com/color/48/power-bi.png"/><h3>Power BI</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png"/><h3>Excel</h3></div>
+        <div class="skill-card"><img src="https://img.icons8.com/color/48/microsoft-powerpoint-2019--v1.png"/><h3>PowerPoint</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/><h3>GitHub</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/><h3>Git</h3></div>
+      </div>
+  
+      <!-- Platforms -->
+      <h3 class="skill-subtitle">Platforms</h3>
+      <div class="skills-container">
+        <div class="skill-card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"/><h3>PyCharm</h3></div>
+        <div class="skill-card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg"/><h3>Jupyter Notebook</h3></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/><h3>VS Code</h3></div>
+      </div>
+  
+  
+  <!-- Skills Section End -->
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-item">
-      <img src="college-logo.png" alt="College Logo" class="college-logo" />
-      <div>
-        <p><strong>Master's in Computer Applications</strong>, Chandigarh University Online – 2025</p>
-        <p><strong>Bachelor of Computer Applications</strong>, Kolhan University – 2020–2023 (83.17%)</p>
+<!-- Projects Section Start -->
+<section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-container">
+  
+        <!-- Project 1 -->
+        <div class="project-card">
+        <a href="Report_Data analysis of Hotel Booking.pdf" target="_blank"> 
+          <img src="project1.png" alt="Hotel Booking Project">
+        </a>
+          <h3>Hotel Booking Cancellation Analysis</h3>
+          <p>Analyzed hotel booking data using Python libraries to discover reasons behind cancellations and provided data-driven solutions.</p>
+          <p><strong>Tech Used:</strong> Python, Pandas, Matplotlib, Seaborn</p>
+          <div class="project-links">
+            <a href="https://github.com/AmitKumarJha-ds/Project_2025/tree/main/Hotel%20Booking%20Analysis" target="_blank">GitHub</a>
+            <!-- <a href="#">Live Demo</a> Uncomment when available -->
+          </div>
+        </div>
+  
+        <!-- Project 2 -->
+        <div class="project-card">
+        <a href="Ola Project.pbix" target="_blank"> 
+            <img src="Project2.png" alt="Ola_booking">
+        </a>
+          <h3>Ola Ride Cancellation Analysis</h3>
+          <p>Processed ride booking data using SQL & Power BI to identify cancellation patterns and improve ride allocation strategies.</p>
+          <p><strong>Tech Used:</strong> SQL, Power BI, Excel</p>
+          <div class="project-links">
+            <a href="https://github.com/AmitKumarJha-ds/Project_2025/tree/main/Ola%20Power%20BI" target="_blank">GitHub</a>
+            <!-- <a href="#">Live Demo</a> Uncomment when available -->
+          </div>
+        </div>
+  
       </div>
     </div>
   </section>
-
-  <section id="experience">
-    <h2>Internships</h2>
-    <div class="internship-card">
-      <img src="internship1.jpg" alt="TCS Certificate" />
-      <p><strong>Tata Consultancy Services</strong><br>Visualisation with Power BI</p>
-    </div>
-    <div class="internship-card">
-      <img src="internship2.jpg" alt="PwC Certificate" />
-      <p><strong>PwC Switzerland</strong><br>Power BI dashboarding</p>
-    </div>
-    <div class="internship-card">
-      <img src="internship3.jpg" alt="Main Flow Certificate" />
-      <p><strong>Main Flow Pvt. Ltd.</strong><br>Data analysis with Python, clustering & EDA</p>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="certificate-grid">
-      <img src="certificate1.jpg" alt="Certificate 1" class="certificate-img" />
-      <img src="certificate2.jpg" alt="Certificate 2" class="certificate-img" />
-      <img src="certificate3.jpg" alt="Certificate 3" class="certificate-img" />
-    </div>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="Amit Resume.pdf" download class="btn"><i class="fas fa-download"></i> Download My Resume</a>
-  </section>
-
-  <!-- ✅ UPDATED CONTACT SECTION BELOW -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-
+  <!-- Projects Section End -->
+  
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+  
     <div class="contact-container">
       <!-- Contact Form -->
-      <form action="https://formsubmit.co/amitkumarjhads@gmail.com" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-      </form>
-
-      <!-- WhatsApp Contact -->
-      <div class="whatsapp-section">
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+918405801203" target="_blank">+91 8405801203</a></p>
-        <p>Scan QR to connect on WhatsApp:</p>
-        <div class="qr-box">
-          <img src="whatsapp-qr.jpg" alt="WhatsApp QR Code" class="qr-img">
+      <div class="contact-form">
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+  
+      <!-- Contact Info & Social Links -->
+      <div class="contact-info">
+        <p><strong>Email:</strong> amitkumarjhads@gmail.com</p>
+        <p><strong>Phone:</strong> +91 8405801203</p>
+  
+        <div class="social-links">
+          <a href="https://github.com/AmitKumarJha-ds" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/amitkumarjha7777/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:amitkumarjhads@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/918405801203" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
   </section>
+  
+  
+  
 
-  <footer>
-    <p>&copy; 2025 Amit Kumar Jha. All rights reserved.</p>
   </footer>
+  
+
+  
+  
 
   <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thanks for reaching out, Amit will get back to you!');
+        form.reset(); // optional: clears the form after submission
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
